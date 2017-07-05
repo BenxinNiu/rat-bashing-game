@@ -42,10 +42,8 @@ NEXT:	LPM R16, Z+      ; load value from z register
 		BRNE NOTHING     ; if not jump to nothing 
 		PUSH R28 
 		INC R25          ; how many rats were hit 
-		;PUSH R16         ; store the rat on stck 
 		CLR R23          ; clear r23
-      ; flash 3 times to inidicate that the rat has been hit
-	    CALL START
+	    CALL START ; flash 3 times to inidicate that the rat has been hit
 NOTHING:INC R28            ; UPDATE ROUND 
 		DEC R19        
 		BRNE NEXT      ; start next round
